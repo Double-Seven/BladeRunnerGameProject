@@ -47,7 +47,6 @@ public class PlayerMonsterMovementController : MotionController
             this.gameObject.GetComponent<PlayerMonsterMovementController>().enabled = false;
 			this.gameObject.GetComponent<PlayerMonsterAI>().enabled = false;
 			animator.SetTrigger("IsDying");
-            Debug.Log("player monster dead");
             monster.isDead = true;
 			// destroy(); // this monster will be called when the animation finished (using animation event setting)
         }

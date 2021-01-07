@@ -19,6 +19,7 @@ public class PlayerMonsterAI : MonoBehaviour
 
     float shootingCooldown = 1f;
     float shootingCooldownTimer = 0f;
+    string incomingTag = "";
 
     private Player player;
     
@@ -35,23 +36,39 @@ public class PlayerMonsterAI : MonoBehaviour
         _tree = new BehaviorTreeBuilder(gameObject)
             .Selector()
                 .Sequence()
-                    .Condition("isBulletIncoming", () => {
+                    .Condition("isIncoming", () => {
                         bool cooldownOK = jumpCooldownTimer > jumpCooldown;
                         // no need to raycast if cooldown
                         if (!cooldownOK) return false;
                         RaycastHit2D raycasthit = Physics2D.CircleCast(this.transform.position, 4f, Vector2.left);
                         // player attack or player itself enters circle cast
-                        
-                        return raycasthit.collider.gameObject.tag.Contains("Player");
+                        incomingTag = raycasthit.collider?.gameObject.tag;
+                        return incomingTag.Contains("Player");
                     })
-                    .Do("Jump", () => {
-                        jumpCooldownTimer = 0f;
-                        if (Random.Range(0f, 2f) > 1)
-                            movementController.jump();
-                        else
-                            movementController.quickMove();
-                        return TaskStatus.Success;
-                    })
+                    .Selector()
+                        .Sequence()
+                            .Condition("isBulletIncoming", () => {
+                                bool isBullet = incomingTag.Contains("PlayerBullet");
+                                return isBullet;
+                            })
+                            .Do("Jump", () => {
+                                jumpCooldownTimer = 0f;
+                                movementController.jump();
+                                return TaskStatus.Success;
+                            })
+                        .End()
+                        .Sequence()
+                            .Condition("isPlayerIncoming", () => {
+                                bool isPlayer = incomingTag.Equals(player.gameObject.tag);
+                                return isPlayer;
+                            })
+                            .Do("Quickmove", () => {
+                                jumpCooldownTimer = 0f;
+                                movementController.quickMove();
+                                return TaskStatus.Success;
+                            })
+                        .End()
+                    .End()
                 .End()
                 .Sequence()
                     .Condition("isPlayerInAttackRange", () => {
