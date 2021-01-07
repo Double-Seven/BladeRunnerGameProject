@@ -20,3 +20,6 @@ https://docs.google.com/document/d/14b-tOU33PlzufKcC6e5A0HWH9K4zInkUeuOET1S8o1E/
 
 ## Plot & Setting
 https://docs.google.com/document/d/1QZn8dZZAzQMf5e5NskX1UESpH8HBFmStIwbhXWWrNTs/
+
+## Kanban board
+https://trello.com/gameproject2021
