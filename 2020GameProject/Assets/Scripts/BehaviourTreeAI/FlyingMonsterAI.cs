@@ -14,7 +14,7 @@ public class FlyingMonsterAI : MonoBehaviour
     public float attackRange = 20f;  // the shooting range for this monster
     public float alertRange = 12f;  // the alerting range for this monster
 
-    private GameObject player;
+    private Player player;
     
 
     [SerializeField]
@@ -56,8 +56,6 @@ public class FlyingMonsterAI : MonoBehaviour
                 })
             .End()
             .Build();
-
-
     }
 
     // Update is called once per frame

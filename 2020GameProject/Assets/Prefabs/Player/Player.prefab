@@ -134,8 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e797d6cfeab9b4ef7808b510043c275b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capsCollider: {fileID: 0}
   fade: 1
-  playerHP: 3
+  isInvincible: 0
+  playerHP: 10
   protectionTime: 2
   m_JumpForce: 280
   m_CrouchSpeed: 0.36
@@ -189,10 +191,10 @@ MonoBehaviour:
   player: {fileID: 6542235627710674089}
   thisAnimator: {fileID: 101521714087224469}
   runSpeed: 20
-  quickMoveCooldown: 1
   dashEffect: {fileID: 3036079489342939092, guid: a052fd1a607eaec45ad641c46a4bac5a,
     type: 3}
   CameraParent: {fileID: 0}
+  quickMoveCooldown: 1
 --- !u!114 &4914710595056042938
 MonoBehaviour:
   m_ObjectHideFlags: 0

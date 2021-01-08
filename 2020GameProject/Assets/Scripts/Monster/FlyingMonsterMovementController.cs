@@ -56,8 +56,6 @@ public class FlyingMonsterMovementController : MotionController
 			// is at the last frame of explosion animation)
         }
 
-
-
 	}
 
 	// used for physical updates

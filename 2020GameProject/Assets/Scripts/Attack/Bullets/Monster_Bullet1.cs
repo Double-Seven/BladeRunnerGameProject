@@ -26,8 +26,8 @@ public class Monster_Bullet1 : Bullet
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") {
-            if (collision.gameObject.GetComponent<CircleCollider2D>().enabled == false) {
-                Debug.Log("dodged");
+            if (collision.gameObject.GetComponent<Character>().isInvincible) {
+                Debug.Log("player dodged");
                 return;
             }
         }

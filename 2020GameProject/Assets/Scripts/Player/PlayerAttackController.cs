@@ -34,8 +34,10 @@ public class PlayerAttackController : AttackController
         meleeCooldownTimer = meleeCooldown;
 
         this.currentAttack = this.attacks[this.attackSelected];
-        this.skills.Add(new ShootingSkill(this.currentAttack, skill1CoolDown));
-        shootingSkill = this.skills[0];
+       
+        shootingSkill = gameObject.AddComponent<ShootingSkill>();
+        shootingSkill.SetSkill(this.currentAttack, skill1CoolDown);
+        this.skills.Add(shootingSkill);
     }
 
     // Update is called once per frame
@@ -102,7 +104,6 @@ public class PlayerAttackController : AttackController
 
         // if cooldown is terminated, player can shoot
         if (fireCoolDownTimer > shootingCoolDown)
-
         {
             // add some randomness to the bullets spawning y-position
             Vector3 spawnPos = new Vector3(this.muzzlePoint.position.x, Random.Range(this.muzzlePoint.position.y - spawnRange, this.muzzlePoint.position.y + spawnRange), this.muzzlePoint.transform.position.z);

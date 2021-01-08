@@ -15,7 +15,7 @@ public class GameFlowManager : MonoBehaviour
 
 
 
-    private GameObject player;
+    public Player player;
     private Player playerScript;
     private LevelLoader levelLoader;
     private List<Monster> monsters;
@@ -29,7 +29,7 @@ public class GameFlowManager : MonoBehaviour
         // hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
 
-        this.player = GameObject.Find("Player");  // get the Player gameobject
+        // this.player = (Player)GameObject.Find("Player");  // get the Player gameobject
         playerScript = player.GetComponent<Player>();  // get the instance of Player script
 
         // get the level loader instance
@@ -66,7 +66,7 @@ public class GameFlowManager : MonoBehaviour
     /// Getter function for player gameobject
     /// </summary>
     /// <returns></returns>
-    public GameObject getPlayer()
+    public Player getPlayer()
     {
         return this.player;
     }

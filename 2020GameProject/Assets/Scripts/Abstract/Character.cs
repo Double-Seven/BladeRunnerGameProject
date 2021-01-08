@@ -12,7 +12,6 @@ public abstract class Character : MonoBehaviour
     public Rigidbody2D thisRB { get; set; }                //The Rigidbody2D component attached to this object(the bullet game object which has a script that derives this abstract class).
     public bool isFacingRight { get; set; } = true;  // For determining which way the player is currently facing.
     public bool isGrounded { get; set; } = true;          // Whether or not the player is grounded.
-
 	public bool isDead { get; set; } = false;  // bool to store whether the player is dead (will be checked by GameFlowManager)
 	public float fade = 1f; // death Dissolve effect
 	Material material;
@@ -48,8 +47,13 @@ public abstract class Character : MonoBehaviour
 		}
 
 		if (isDead && fade >= 0f) {
-			fade -= Time.deltaTime;
+			fade -= Time.fixedDeltaTime;
 		}
+
+        if (isDead && fade < 0.1f) {
+            // a hack to fix IsDying animation event bugs for PlayerMonster
+            Destroy(gameObject);
+        }
 
         if (material != null)
 		    material.SetFloat("_Fade", fade);

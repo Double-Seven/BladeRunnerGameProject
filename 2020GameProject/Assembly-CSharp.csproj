@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Attack\Bullets\Monster_Bullet1.cs" />
     <Compile Include="Assets\Scripts\Attack\Bullets\Player_Bullet1.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\FlyingMonsterAI.cs" />
+    <Compile Include="Assets\Scripts\BehaviourTreeAI\PlayerMonsterAI.cs" />
     <Compile Include="Assets\Scripts\Camara\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camara\MainSceneCameraController.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameFlowManager.cs" />
@@ -83,6 +84,9 @@
     <Compile Include="Assets\Scripts\Monster\FlyingMonsterAttackController.cs" />
     <Compile Include="Assets\Scripts\Monster\FlyingMonsterMovementController.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster.cs" />
+    <Compile Include="Assets\Scripts\Monster\PlayerMonster.cs" />
+    <Compile Include="Assets\Scripts\Monster\PlayerMonsterAttackController.cs" />
+    <Compile Include="Assets\Scripts\Monster\PlayerMonsterMovementController.cs" />
     <Compile Include="Assets\Scripts\ObsolateScripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackController.cs" />

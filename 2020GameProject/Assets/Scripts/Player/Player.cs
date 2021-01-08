@@ -193,6 +193,4 @@ public class Player : Character
 		}
 	}
 
-
-
 }

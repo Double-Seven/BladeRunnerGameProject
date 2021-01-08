@@ -7,7 +7,7 @@ public class FlyingMonsterAttackController : AttackController
     public Transform muzzlePoint;  // the muzzle point of weapon
 
     public Character character;
-    private GameObject player;
+    private Player player;
     private float spawnRange = 0.1f;  // the vertical spawan range for bullets (to add some randomness to the bullets spawning position)
 
     private IEnumerator coroutine; // the attack coroutine
@@ -51,13 +51,13 @@ public class FlyingMonsterAttackController : AttackController
     /// <param name="target"></param>
     /// <param name="cooldown"> The shooting cooldown between bullets</param>
     /// <param name="numBullets"> The num of Bullets to be shot</param>
-    public void attack(GameObject target, float cooldown, int numBullets)
+    public void attack(Character target, float cooldown, int numBullets)
     {
         StartCoroutine(Fire(target, cooldown, numBullets));  // start the fire coroutine
     }
 
     //Co-routine for firing in the target direction
-    protected IEnumerator Fire(GameObject target, float cooldown, int numBullets)
+    protected IEnumerator Fire(Character target, float cooldown, int numBullets)
     {
         Vector3 spawnPos;
         Attack bullet;
@@ -76,7 +76,6 @@ public class FlyingMonsterAttackController : AttackController
             // set the shooting direction of this bullet depending on the player position
             direction = target.transform.position - this.transform.position;
             bullet.GetComponent<Attack>().setDirection(direction);
-
 
             // Yielding and wait for cooldown seconds before the shooting of the next bullet
             yield return new WaitForSeconds(cooldown);

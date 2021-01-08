@@ -28,6 +28,12 @@ public class Player_Bullet1 : Bullet
     {
         if (collision.gameObject.tag == "Monster" || collision.gameObject.tag == "Ground")
         {
+            if (collision.gameObject.tag == "Monster") {
+                if (collision.gameObject.GetComponent<Character>().isInvincible) {
+                    Debug.Log("monster dodged");
+                    return;
+            }
+        }
             stop();  // stop the motion of bullet when hits a monster
         }
     }

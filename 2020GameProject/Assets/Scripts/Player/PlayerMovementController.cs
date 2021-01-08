@@ -9,10 +9,9 @@ public class PlayerMovementController : MotionController
 	public Player player;
 	public Animator thisAnimator;
 	public float runSpeed = 20f;
-	public float quickMoveCooldown = 1;
 	public GameObject dashEffect;
 	public CameraShake CameraParent;
-
+	public float quickMoveCooldown;
 
 	private GameFlowManager gameFlowManager;
 
@@ -23,7 +22,6 @@ public class PlayerMovementController : MotionController
     //private bool isQuickMoving = false;
 	private bool isRunning = false;
 	private bool isTeleporting = false;
-	private float quickMoveCooldownTimer = 0;
 	private Skill quickMoveSkill;
 
 	
@@ -33,20 +31,14 @@ public class PlayerMovementController : MotionController
 		base.animator = thisAnimator;
 
 		// initialize motion skill
-		this.quickMoveSkill = new QuickMove(null, quickMoveCooldown, player);
-		quickMoveCooldownTimer = quickMoveCooldown;
+		this.quickMoveSkill = gameObject.AddComponent<QuickMove>().SetQuickMove(null, quickMoveCooldown, player, dashEffect, CameraParent);
 
 		gameFlowManager = GameObject.Find("GameManager").GetComponent<GameFlowManager>();
-	}
-
-	private void UpdateCooldown() {
-		quickMoveCooldownTimer += Time.deltaTime;
 	}
 
     // Update is called once per frame
     void Update()
 	{
-		this.UpdateCooldown();
 
 		// determine if the player is try to teleport to the next map
 		if(Input.GetButtonDown("Up") && player.isReachingTPpoint)
@@ -60,11 +52,10 @@ public class PlayerMovementController : MotionController
 			// update the fade value of player (dissolve effect)
 			if (player.fade < 1f && !isTeleporting)
             {
-				player.fade += Time.deltaTime * 1f;
+				// player.fade += Time.deltaTime * 1f;
 			}
             else
             {
-				QuickMoveEnd();
 				player.fade -= Time.deltaTime * 1f;  // dissolve the player when teleport
 			}
 		}
@@ -106,7 +97,7 @@ public class PlayerMovementController : MotionController
 		}
 
 		
-		if (Input.GetButtonDown("QuickMove") && quickMoveCooldownTimer > quickMoveCooldown && isRunning)
+		if (Input.GetButtonDown("QuickMove"))
 		{
 			QuickMove();
 		}
@@ -121,28 +112,8 @@ public class PlayerMovementController : MotionController
 
 	}
 
-	void QuickMoveEnd() {
-		player.isInvincible = false; // end of quickmove invincibility
-		player.GetComponent<CapsuleCollider2D>().enabled = true;
-		player.GetComponent<CircleCollider2D>().enabled = true;
-	}
-
 	void QuickMove() {
-		//isQuickMoving = true;
-		this.quickMoveSkill.runSkill();
-		player.fade = 0.2f; // fade effect in reverse
-		player.isInvincible = true;
-		player.GetComponent<CapsuleCollider2D>().enabled = false;
-		player.GetComponent<CircleCollider2D>().enabled = false;
-		quickMoveCooldownTimer = 0;
-		//isFiring = false;
-		if (!player.isJumping) {
-			animator.SetTrigger("Crouch");
-		} else {
-			animator.Play("Jump", 0, 0f);
-		}
-		Destroy(Instantiate(dashEffect, transform.position, Quaternion.identity), 1);
-		CameraParent.ShakeCamera(0.5f, 0.005f);
+		this.quickMoveSkill.runSkill(new Vector2(player.isFacingRight ? 1 : -1, Input.GetAxisRaw("Vertical")));
 	}
 
 	// used for physical updates
@@ -183,6 +154,7 @@ public class PlayerMovementController : MotionController
 
 		// deactivate the player moving sript
 		this.player.gameObject.GetComponent<PlayerMovementController>().enabled = false;
+		this.player.gameObject.GetComponent<PlayerAttackController>().enabled = false;
 	}
 
 

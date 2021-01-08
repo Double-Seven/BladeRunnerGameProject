@@ -47,3 +47,4 @@ MonoBehaviour:
   loseText: {fileID: 0}
   teleportText: {fileID: 0}
   playAgainButton: {fileID: 0}
+  player: {fileID: 0}
