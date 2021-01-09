@@ -53,7 +53,7 @@ public class CrabMonsterAI : MonoBehaviour
                             })
                             .Do("Jump", () => {
                                 jumpCooldownTimer = 0f;
-                                movementController.jump();
+                                movementController.quickMove();
                                 return TaskStatus.Success;
                             })
                         .End()
@@ -64,7 +64,7 @@ public class CrabMonsterAI : MonoBehaviour
                             })
                             .Do("Quickmove", () => {
                                 jumpCooldownTimer = 0f;
-                                movementController.quickMove();
+                                movementController.jump();
                                 return TaskStatus.Success;
                             })
                         .End()
@@ -79,7 +79,8 @@ public class CrabMonsterAI : MonoBehaviour
                     // .WaitTime(1f)  // wait 1 second before each attack action
                     .Do("Attack", () => {
                         shootingCooldownTimer = 0f;
-                        movementController.pathFinding(player.transform.position - this.transform.position);
+                        // speed up
+                        movementController.pathFinding(2 * (player.transform.position - this.transform.position));
                         return TaskStatus.Success;
                     })
                 .End()
