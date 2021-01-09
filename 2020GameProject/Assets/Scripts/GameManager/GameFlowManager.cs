@@ -11,8 +11,10 @@ public class GameFlowManager : MonoBehaviour
     public TMP_Text winText;
     public TMP_Text loseText;
     public TMP_Text teleportText;
-    public Button playAgainButton;
+    public TMP_Text tipText;
 
+    public Button playAgainButton;
+    
 
 
     public Player player;
@@ -40,6 +42,7 @@ public class GameFlowManager : MonoBehaviour
         winText.gameObject.SetActive(false);
         loseText.gameObject.SetActive(false);
         teleportText.gameObject.SetActive(false);
+        tipText?.gameObject.SetActive(false);
         playAgainButton.gameObject.SetActive(false);
         
 

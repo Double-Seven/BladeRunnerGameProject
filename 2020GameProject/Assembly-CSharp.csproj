@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\GameManager\GameFlowManager.cs" />
     <Compile Include="Assets\Scripts\LevelLoader\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LevelLoader\TeleportPoint.cs" />
+    <Compile Include="Assets\Scripts\LevelLoader\TextPoint.cs" />
     <Compile Include="Assets\Scripts\Monster\FlyingMonsterAttackController.cs" />
     <Compile Include="Assets\Scripts\Monster\FlyingMonsterMovementController.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster.cs" />
@@ -679,128 +680,128 @@
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Base">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="Fluid.BehaviorTree.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Fluid.BehaviorTree.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Fluid.BehaviorTree">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Fluid.BehaviorTree.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/akira77/Programming/Project/2020GameProject/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluid.BehaviorTree.Editor">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Fluid.BehaviorTree.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluid.BehaviorTree">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Fluid.BehaviorTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
