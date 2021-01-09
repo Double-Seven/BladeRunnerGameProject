@@ -1,15 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using CleverCrow.Fluid.BTs.Trees;
 using CleverCrow.Fluid.BTs.Tasks;
 
 
 // Class for the monster AI using behaviour tree
-public class PlayerMonsterAI : MonoBehaviour
+public class CrabMonsterAI : MonoBehaviour
 {
-    
-    public PlayerMonsterMovementController movementController;
-    public PlayerMonsterAttackController attackController;
+
+    public CrabMonsterMovementController movementController;
+    public AttackController attackController;
 
     public float attackRange = 5f;  // the shooting range for this monster
     public float alertRange = 12f;  // the alerting range for this monster
@@ -22,7 +22,7 @@ public class PlayerMonsterAI : MonoBehaviour
     string incomingTag = "";
 
     private Player player;
-    
+
 
     [SerializeField]
     private BehaviorTree _tree;
@@ -80,7 +80,6 @@ public class PlayerMonsterAI : MonoBehaviour
                     .Do("Attack", () => {
                         shootingCooldownTimer = 0f;
                         movementController.pathFinding(player.transform.position - this.transform.position);
-                        attackController.attack(player, 2f, 1);
                         return TaskStatus.Success;
                     })
                 .End()

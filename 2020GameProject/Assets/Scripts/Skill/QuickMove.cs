@@ -64,8 +64,11 @@ public class QuickMove : Skill {
     void ShowEffects(bool isJumping) {
         target.fade = 0.2f; // fade effect in reverse
 		target.isInvincible = true;
-		target.GetComponent<CapsuleCollider2D>().enabled = false;
-		target.GetComponent<CircleCollider2D>().enabled = false;
+        foreach (Collider col in target.GetComponentsInChildren<Collider>())
+        {
+            col.enabled = false;
+        }
+		
 		cooldownTimer = 0;
 		if (!isJumping) {
 			movementcontroller.animator.SetTrigger("Crouch");
@@ -81,8 +84,10 @@ public class QuickMove : Skill {
 
     void endSkill() {
         target.isInvincible = false; // end of quickmove invincibility
-		target.GetComponent<CapsuleCollider2D>().enabled = true;
-		target.GetComponent<CircleCollider2D>().enabled = true;
+        foreach (Collider col in target.GetComponentsInChildren<Collider>())
+        {
+            col.enabled = true;
+        }
         target.fade = 1f;
     }
 }

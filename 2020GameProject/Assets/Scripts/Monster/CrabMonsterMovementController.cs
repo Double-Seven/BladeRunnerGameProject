@@ -1,10 +1,9 @@
+﻿using System.Collections;
 using UnityEngine;
-using System.Collections;
 
-
-// Class to control the monster motion and animation
-public class PlayerMonsterMovementController : MotionController
+public class CrabMonsterMovementController : MotionController
 {
+
 	public Animator thisAnimator;
 	public float movingSpeed = 10f;
 
@@ -12,15 +11,15 @@ public class PlayerMonsterMovementController : MotionController
 	private Monster monster;
 	private Vector3 currentPosition;
 	private Vector3 wanderDest = Vector3.zero;  // the current destination of wandering action
-	private bool isDestroyed = false; 
+	private bool isDestroyed = false;
 
-    private Skill quickMoveSkill;
+	private Skill quickMoveSkill;
 
-    private float quickMoveCooldown = 2f;
+	private float quickMoveCooldown = 2f;
 
 
-    private void Start()
-    {
+	private void Start()
+	{
 		base.animator = thisAnimator;
 		monster = GetComponent<Monster>();
 
@@ -29,27 +28,27 @@ public class PlayerMonsterMovementController : MotionController
 		// get the player gameObject from the game flow manager
 		player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
 
-        this.quickMoveSkill = gameObject.AddComponent<QuickMove>().SetQuickMove(null, quickMoveCooldown, monster, null, null);
+		this.quickMoveSkill = gameObject.AddComponent<QuickMove>().SetQuickMove(null, quickMoveCooldown, monster, null, null);
 	}
 
 
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
 	{
 
 		// check for destroying condition
-		if(monster.checkHP() && !isDestroyed)
-        {
+		if (monster.checkHP() && !isDestroyed)
+		{
 			isDestroyed = true;
 			// deactivate the monster moving sript
-			this.gameObject.GetComponent<PlayerMonsterAttackController>().enabled = false;
-            this.gameObject.GetComponent<PlayerMonsterMovementController>().enabled = false;
-			this.gameObject.GetComponent<PlayerMonsterAI>().enabled = false;
+		//	this.gameObject.GetComponent<AttackController>().enabled = false;
+			this.gameObject.GetComponent<MotionController>().enabled = false;
+			this.gameObject.GetComponent<CrabMonsterAI>().enabled = false;
 			animator.SetTrigger("IsDying");
-            monster.isDead = true;
+			monster.isDead = true;
 			// destroy(); // this monster will be called when the animation finished (using animation event setting)
-        }
+		}
 	}
 
 
@@ -69,14 +68,14 @@ public class PlayerMonsterMovementController : MotionController
 
 
 	/// <summary>
-    /// Function to perform wandering action for this monster
-    /// </summary>
+	/// Function to perform wandering action for this monster
+	/// </summary>
 	public void wander()
-    {
+	{
 		// if currently no wandering destination, assign a new one
-		if(wanderDest == Vector3.zero)
-        {
-			int xDir = Random.Range(0,2);
+		if (wanderDest == Vector3.zero)
+		{
+			int xDir = Random.Range(0, 2);
 			// move to left if xDir is 0, move to right if xDir is 1
 			Vector3 direction = new Vector3((xDir == 0 ? -1 : 1), transform.position.y, transform.position.z);
 
@@ -89,45 +88,47 @@ public class PlayerMonsterMovementController : MotionController
 			monster.Move(wanderDest, movingSpeed);
 		}
 		else  // else, move toward the current destination
-        {
+		{
 			// if the monster is reaching the wander destination, reset the destination to zero
-			if(Vector3.Distance(this.transform.position, this.wanderDest) <= 0.1f)
-            {
+			if (Vector3.Distance(this.transform.position, this.wanderDest) <= 0.1f)
+			{
 				this.wanderDest = Vector3.zero;
-            }
+			}
 			else
-            {
+			{
 				// move the monster toward the target
 				monster.Move(wanderDest, movingSpeed);
 			}
-        }
-    }
+		}
+	}
 
 	/// <summary>
-    /// Function to perform path finding to the target
-    /// </summary>
-    /// <param name="target"></param>
+	/// Function to perform path finding to the target
+	/// </summary>
+	/// <param name="target"></param>
 	public void pathFinding(Vector3 target)
-    {
+	{
 		// move the monster toward the target
 		monster.Move(target.x / Mathf.Abs(target.x) * movingSpeed * Time.fixedDeltaTime, false, false);
 	}
 
 
-    public void jump() {
-        animator.SetBool("IsJumping", true);
-        monster.Move(0f, false, true);
-    }
+	public void jump()
+	{
+		animator.SetBool("IsJumping", true);
+		monster.Move(0f, false, true);
+	}
 
-    public void quickMove() {
-        // disable air dash due to bug
-        if (!monster.isGrounded) return;
-        Vector2 move = Vector2.zero;
-        // always dash in the direction it's facing
-        move.x = monster.isFacingRight ? 1 : -1;
-        // move.y = Random.Range(-1, 2) > 0 ? 1 : -1;
-        quickMoveSkill.runSkill(move);
-    }
+	public void quickMove()
+	{
+		// disable air dash due to bug
+		if (!monster.isGrounded) return;
+		Vector2 move = Vector2.zero;
+		// always dash in the direction it's facing
+		move.x = monster.isFacingRight ? 1 : -1;
+		// move.y = Random.Range(-1, 2) > 0 ? 1 : -1;
+		quickMoveSkill.runSkill(move);
+	}
 
 	/// <summary>
 	/// Event function that resets the parameter in animator
@@ -142,6 +143,5 @@ public class PlayerMonsterMovementController : MotionController
 	{
 		//animator.SetBool("IsCrouching", isCrouching);
 	}
-
 
 }
