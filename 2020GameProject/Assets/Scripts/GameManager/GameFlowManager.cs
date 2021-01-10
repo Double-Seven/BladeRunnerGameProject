@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameFlowManager : MonoBehaviour
 {
+
+    public static GameFlowManager instance;
     [Header("UI elements")]
     public TMP_Text winText;
     public TMP_Text loseText;
@@ -20,7 +22,7 @@ public class GameFlowManager : MonoBehaviour
     public Player player;
     private Player playerScript;
     private LevelLoader levelLoader;
-    private List<Monster> monsters;
+    public List<Monster> monsters;
     private bool isGameOver = false;
 
 
@@ -28,6 +30,13 @@ public class GameFlowManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Debug.LogError("duplicate gameflowmanager object, ignoring this one", gameObject);
+        }
         // hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
 

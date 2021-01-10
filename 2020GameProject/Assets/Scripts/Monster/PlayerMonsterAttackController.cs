@@ -17,7 +17,7 @@ public class PlayerMonsterAttackController : AttackController
     protected override void Start()
     {
         // get the player gameObject from the game flow manager
-        player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
+        player = GameFlowManager.instance.getPlayer();
 
         // get identical attacks from Player (need to refactor Attack target selection)
         // this.attacks = player.GetComponent<PlayerAttackController>().attacks;

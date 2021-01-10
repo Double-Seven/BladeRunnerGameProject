@@ -27,7 +27,7 @@ public class PlayerMonsterMovementController : MotionController
 		currentPosition = this.transform.position;
 
 		// get the player gameObject from the game flow manager
-		player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
+		player = GameFlowManager.instance.getPlayer();
 
         this.quickMoveSkill = gameObject.AddComponent<QuickMove>().SetQuickMove(null, quickMoveCooldown, monster, null, null);
 	}

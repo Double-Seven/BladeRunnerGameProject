@@ -8,7 +8,7 @@ public class FlyingMonsterMovementController : MotionController
 	public Animator thisAnimator;
 	public float movingSpeed = 10f;
 
-	private GameFlowManager player;
+	private Player player;
 	private Monster monster;
 	private Vector3 currentPosition;
 	private Vector3 wanderDest = Vector3.zero;  // the current destination of wandering action
@@ -24,7 +24,7 @@ public class FlyingMonsterMovementController : MotionController
 		currentPosition = this.transform.position;
 
 		// get the player gameObject from the game flow manager
-		player = GameObject.Find("GameManager").GetComponent<GameFlowManager>();
+		player = GameFlowManager.instance.getPlayer();
 	}
 
 

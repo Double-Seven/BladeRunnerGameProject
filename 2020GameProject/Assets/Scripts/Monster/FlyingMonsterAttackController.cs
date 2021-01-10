@@ -18,7 +18,7 @@ public class FlyingMonsterAttackController : AttackController
         this.currentAttack = this.attacks[this.attackSelected];
 
         // get the player gameObject from the game flow manager
-        player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
+        player = GameFlowManager.instance.getPlayer();
     }
 
     // Update is called once per frame

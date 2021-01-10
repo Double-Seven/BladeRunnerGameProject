@@ -23,7 +23,7 @@ public class FlyingMonsterAI : MonoBehaviour
     private void Start()
     {
         // get the player gameObject from the game flow manager
-        player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
+        player = GameFlowManager.instance.getPlayer();
 
         // build the behaviour tree
         _tree = new BehaviorTreeBuilder(gameObject)
@@ -62,6 +62,7 @@ public class FlyingMonsterAI : MonoBehaviour
     void Update()
     {
         // Update our tree every frame
+        if (player == null) return;
         _tree.Tick();
         //Debug.Log(Vector3.Distance(player.transform.position, this.transform.position));
     }
