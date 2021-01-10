@@ -30,7 +30,7 @@ public class CrabMonsterAI : MonoBehaviour
     private void Start()
     {
         // get the player gameObject from the game flow manager
-        player = GameObject.Find("GameManager").GetComponent<GameFlowManager>().getPlayer();
+        player = GameFlowManager.instance.getPlayer();
         jumpCooldownTimer = jumpCooldown;
         // build the behaviour tree
         _tree = new BehaviorTreeBuilder(gameObject)

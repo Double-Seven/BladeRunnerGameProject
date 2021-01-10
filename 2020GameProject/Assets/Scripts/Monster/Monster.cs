@@ -21,6 +21,8 @@ public class Monster : Character
     // Use this for initialization
     protected override void Start()
     {
+        // add self to Manager list
+        GameFlowManager.instance.monsters.Add(this);
         this.isFacingRight = false;
         this.healthPoint = monsterHP;
         if (OnLandEvent == null)
@@ -28,10 +30,15 @@ public class Monster : Character
         base.Start();
     }
 
+    private void OnDestroy()
+    {
+        GameFlowManager.instance.monsters.Remove(this);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        checkDie();
+        checkDieAndFade();
     }
 
 

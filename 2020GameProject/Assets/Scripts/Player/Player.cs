@@ -77,7 +77,7 @@ public class Player : Character
 				isJumping = false;
 			}
 		}
-		checkDie();
+		checkDieAndFade();
 
 	}
 

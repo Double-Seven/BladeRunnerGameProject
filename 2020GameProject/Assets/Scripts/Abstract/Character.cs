@@ -26,7 +26,7 @@ public abstract class Character : MonoBehaviour
         //Get a component reference to this object's Rigidbody2D
         thisRB = GetComponent<Rigidbody2D>();
         material = GetComponent<SpriteRenderer>().material;
-
+        fade = 0.2f;
     }
 
     /// <summary>
@@ -39,7 +39,7 @@ public abstract class Character : MonoBehaviour
             this.healthPoint -= damage;
     }
 
-    protected void checkDie() {
+    protected void checkDieAndFade() {
         // check for destroying condition
 		if (checkHP() && !isDead)
 		{
@@ -50,10 +50,13 @@ public abstract class Character : MonoBehaviour
 			fade -= Time.fixedDeltaTime;
 		}
 
-        if (isDead && fade < 0.1f) {
+        if (isDead && fade < 0.01f) {
             // a hack to fix IsDying animation event bugs for PlayerMonster
             Destroy(gameObject);
         }
+        // make fade return to normal
+        if (fade < 1f && !isDead)
+            fade += Time.deltaTime * 1f;
 
         if (material != null)
 		    material.SetFloat("_Fade", fade);

@@ -50,13 +50,9 @@ public class PlayerMovementController : MotionController
 		else
         {
 			// update the fade value of player (dissolve effect)
-			if (player.fade < 1f && !isTeleporting)
+			if (isTeleporting)
             {
-				// player.fade += Time.deltaTime * 1f;
-			}
-            else
-            {
-				player.fade -= Time.deltaTime * 1f;  // dissolve the player when teleport
+				player.fade -= Time.deltaTime * 2f;  // dissolve the player when teleport
 			}
 		}
 		
