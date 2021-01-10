@@ -39,7 +39,8 @@ public class SpawnEnemyManager : MonoBehaviour
 
     Vector2 positionNearPlayer(Vector2 positionPlayer)
     {
-        float xVal = Random.Range(positionPlayer.x - 5, positionPlayer.x + 6);
+        player = GameFlowManager.instance.getPlayer();
+        float xVal = positionPlayer.x + Random.Range(4, 6) * (Random.Range(-1, 2) > 0 ? 1 : -1);
         float yVal = Random.Range(positionPlayer.y, positionPlayer.y + 1);
 
         return new Vector2(xVal, yVal);
