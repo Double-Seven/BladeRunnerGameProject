@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Attack\Bullets\Bullet.cs" />
     <Compile Include="Assets\Scripts\Attack\Bullets\Monster_Bullet1.cs" />
     <Compile Include="Assets\Scripts\Attack\Bullets\Player_Bullet1.cs" />
+    <Compile Include="Assets\Scripts\Attack\ForceFields\ForceField.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\CrabMonsterAI.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\FlyingMonsterAI.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\PlayerMonsterAI.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
+    <Compile Include="Assets\Scripts\Skill\ForceFieldSkill.cs" />
     <Compile Include="Assets\Scripts\Skill\QuickMove.cs" />
     <Compile Include="Assets\Scripts\Skill\ShootingSkill.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
