@@ -31,9 +31,9 @@ public class Monster_Bullet1 : Bullet
                 return;
             }
         }
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Monster")
         {
-            stop();  // stop the motion of bullet when hits a monster
+            stop();  // stop the motion of bullet when hits something (monster, ground, force field, etc)
         }
     }
 

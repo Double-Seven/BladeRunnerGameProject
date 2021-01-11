@@ -11,15 +11,14 @@ public class PlayerAttackController : AttackController
     public Transform muzzlePoint;  // the muzzle point of weapon
     public Transform MeleePoint; // point of melee attack
     public float shootingCoolDown;  // the cooldown time between each shoot
-    public float meleeCooldown;
     public float skill1CoolDown;  // the cooldown time of skill1
 
     public Character character;
 
     private float fireCoolDownTimer = 0;  // timer for the shooting cooldown
     private float spawnRange = 0.1f;  // the vertical spawan range for bullets (to add some randomness to the bullets spawning position)
-    private float meleeCooldownTimer = 0;
     private Skill shootingSkill;
+    private ForceFieldSkill forceFieldSkill;
 
     // skill1
     private float skill1CoolDownTimer = 0;  // timer for the skill1 cooldown
@@ -31,13 +30,23 @@ public class PlayerAttackController : AttackController
     {
         fireCoolDownTimer = shootingCoolDown;
         skill1CoolDownTimer = skill1CoolDown;
-        meleeCooldownTimer = meleeCooldown;
 
         this.currentAttack = this.attacks[this.attackSelected];
        
         shootingSkill = gameObject.AddComponent<ShootingSkill>();
         shootingSkill.SetSkill(this.currentAttack, skill1CoolDown);
         this.skills.Add(shootingSkill);
+
+        forceFieldSkill = gameObject.AddComponent<ForceFieldSkill>();
+        Attack defaultff = null;
+        foreach (Attack att in attacks)
+        {
+            if (att.gameObject.name.Contains("ForceField"))
+            {
+                defaultff = att;
+            }
+        }
+        forceFieldSkill.SetForceField(defaultff, 10f, character);
     }
 
     // Update is called once per frame
@@ -52,7 +61,6 @@ public class PlayerAttackController : AttackController
     private void updateCooldown() {
         fireCoolDownTimer += Time.deltaTime;
         skill1CoolDownTimer += Time.deltaTime;
-        meleeCooldownTimer += Time.deltaTime;
     }
 
     /// <summary>
@@ -82,17 +90,7 @@ public class PlayerAttackController : AttackController
 
     // tentative Melee function
     private void Melee() {
-        if (meleeCooldownTimer < meleeCooldown) return;
-        float deltaAngle = 1f;
-        float moveForce = 1000f;
-        animator.Play("Base Layer.BackJump", 0, -0.1f);
-        Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad*deltaAngle) * moveForce, Mathf.Sin(Mathf.Deg2Rad*deltaAngle) * moveForce);
-        if (!this.character.isFacingRight)
-            direction.x = direction.x * -1;
-        // character.thisRB.AddForce(direction);
-
-        MeleePoint.GetComponent<Animator>().SetTrigger("Melee");
-        meleeCooldownTimer = 0f;
+        forceFieldSkill.createSkill(transform);
     }
 
     /// <summary>

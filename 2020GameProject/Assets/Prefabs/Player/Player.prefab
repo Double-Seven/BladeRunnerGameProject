@@ -210,6 +210,7 @@ MonoBehaviour:
   animator: {fileID: 101521714087224469}
   attacks:
   - {fileID: 4497383734388207754, guid: 4061fe785d7ad47e19c3c619e0ce153b, type: 3}
+  - {fileID: 9158815435108530928, guid: 4ef2fa47581302c489d5b80d78cee657, type: 3}
   attackSelected: 0
   muzzlePoint: {fileID: 1696825744}
   MeleePoint: {fileID: 1589407206604978473}

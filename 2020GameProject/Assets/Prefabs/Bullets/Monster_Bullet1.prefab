@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2619188256573940384}
   - component: {fileID: 2619188256573940390}
   - component: {fileID: 2619188256573940389}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Monster_Bullet1
   m_TagString: MonsterBullet
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044785532895908006}
   - component: {fileID: 4783589547516677599}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
