@@ -7,6 +7,7 @@ using System.Collections;
 public abstract class Character : MonoBehaviour
 {
     public float healthPoint { get; set; }  // HP of this character
+    public HealthBar HPBar;
 
     public CapsuleCollider2D capsCollider;      //The collider component attached to this object(the bullet game object which has a script that derives this abstract class).
     public Rigidbody2D thisRB { get; set; }                //The Rigidbody2D component attached to this object(the bullet game object which has a script that derives this abstract class).
@@ -37,6 +38,8 @@ public abstract class Character : MonoBehaviour
     {
         if (!isInvincible)
             this.healthPoint -= damage;
+        if (HPBar)
+            HPBar.SetHealth(healthPoint);
     }
 
     protected void checkDieAndFade() {

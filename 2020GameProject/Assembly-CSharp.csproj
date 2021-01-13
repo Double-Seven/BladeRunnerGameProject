@@ -809,6 +809,7 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>/Users/Macbook/Documents/BladeRunnerGameProject/2020GameProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
+    <Compile Include="Assets\Scripts\UI\CooldownBar.cs" />
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

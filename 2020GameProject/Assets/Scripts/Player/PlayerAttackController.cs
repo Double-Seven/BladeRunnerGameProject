@@ -82,14 +82,14 @@ public class PlayerAttackController : AttackController
             this.skill1();
         }
 
-        if (Input.GetButtonDown("Melee")) {
-           this.Melee();
+        if (Input.GetButtonDown("Skill2")) {
+           this.Skill2();
         }
     }
 
 
     // tentative Melee function
-    private void Melee() {
+    private void Skill2() {
         forceFieldSkill.createSkill(transform);
     }
 
