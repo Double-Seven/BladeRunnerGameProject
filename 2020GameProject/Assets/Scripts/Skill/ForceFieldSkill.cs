@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ForceFieldSkill : Skill
 {
-    float cooldown = 10f;
     float cooldownTimer = 0f;
     MotionController movementcontroller;
     Character target;

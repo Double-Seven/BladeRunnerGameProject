@@ -139,6 +139,7 @@ MonoBehaviour:
   isInvincible: 0
   playerHP: 10
   protectionTime: 2
+  HPBar: {fileID: 2533468016560241841, guid: 6ff7d9939e9e14729bdec3952becf144, type: 3}
   m_JumpForce: 280
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
@@ -215,7 +216,6 @@ MonoBehaviour:
   muzzlePoint: {fileID: 1696825744}
   MeleePoint: {fileID: 1589407206604978473}
   shootingCoolDown: 0.2
-  meleeCooldown: 0.5
   skill1CoolDown: 5
   character: {fileID: 6542235627710674089}
 --- !u!95 &101521714087224469

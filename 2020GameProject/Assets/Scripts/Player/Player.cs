@@ -7,6 +7,7 @@ public class Player : Character
 	[Header("Battle values")]
 	public float playerHP;
 	public float protectionTime;  // the protection time after the player is getting attacked
+	public HealthBar HPBar;
 
 	[Header("Motion values")]
 	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
@@ -49,7 +50,7 @@ public class Player : Character
 		// initialization
 		base.healthPoint = playerHP;
         base.Start();  // call the start() in the base class
-
+		HPBar.SetMaxHealth(healthPoint);
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 
@@ -78,6 +79,7 @@ public class Player : Character
 			}
 		}
 		checkDieAndFade();
+		HPBar.SetHealth(healthPoint);
 
 	}
 
