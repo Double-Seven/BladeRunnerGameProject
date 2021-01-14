@@ -29,7 +29,6 @@ public class PlayerAttackController : AttackController
     protected override void Start()
     {
         fireCoolDownTimer = shootingCoolDown;
-        skill1CoolDownTimer = skill1CoolDown;
 
         this.currentAttack = this.attacks[this.attackSelected];
        
@@ -60,7 +59,6 @@ public class PlayerAttackController : AttackController
 
     private void updateCooldown() {
         fireCoolDownTimer += Time.deltaTime;
-        skill1CoolDownTimer += Time.deltaTime;
     }
 
     /// <summary>
@@ -82,14 +80,14 @@ public class PlayerAttackController : AttackController
             this.skill1();
         }
 
-        if (Input.GetButtonDown("Melee")) {
-           this.Melee();
+        if (Input.GetButtonDown("Skill2")) {
+           this.Skill2();
         }
     }
 
 
     // tentative Melee function
-    private void Melee() {
+    private void Skill2() {
         forceFieldSkill.createSkill(transform);
     }
 
@@ -118,14 +116,6 @@ public class PlayerAttackController : AttackController
     /// </summary>
     private void skill1()
     { 
-        
-        // if cooldown is terminated, player can shoot
-        if (skill1CoolDownTimer > shootingSkill.cooldown)
-        {
-            animator.Play("Base Layer.Jump", 0, 0f);
-            shootingSkill.createSkill(this.transform);
-            skill1CoolDownTimer = 0f;
-        }
-        
+        shootingSkill.createSkill(this.transform); 
     }
 }

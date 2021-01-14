@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e797d6cfeab9b4ef7808b510043c275b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPBar: {fileID: 0}
   capsCollider: {fileID: 0}
   fade: 1
   isInvincible: 0
@@ -176,6 +177,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isJumping: 1
+  cooldownBarDash: {fileID: 0}
+  cooldownBarSkill1: {fileID: 0}
+  cooldownBarSkill2: {fileID: 0}
 --- !u!114 &101521714087224475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +219,6 @@ MonoBehaviour:
   muzzlePoint: {fileID: 1696825744}
   MeleePoint: {fileID: 1589407206604978473}
   shootingCoolDown: 0.2
-  meleeCooldown: 0.5
   skill1CoolDown: 5
   character: {fileID: 6542235627710674089}
 --- !u!95 &101521714087224469

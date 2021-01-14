@@ -99,6 +99,8 @@
     <Compile Include="Assets\Scripts\Skill\ForceFieldSkill.cs" />
     <Compile Include="Assets\Scripts\Skill\QuickMove.cs" />
     <Compile Include="Assets\Scripts\Skill\ShootingSkill.cs" />
+    <Compile Include="Assets\Scripts\UI\CooldownBar.cs" />
+    <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

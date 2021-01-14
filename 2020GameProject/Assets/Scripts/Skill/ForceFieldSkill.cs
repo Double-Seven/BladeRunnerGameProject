@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ForceFieldSkill : Skill
 {
-    float cooldown = 10f;
     float cooldownTimer = 0f;
     MotionController movementcontroller;
     Character target;
@@ -12,12 +11,14 @@ public class ForceFieldSkill : Skill
     void Start()
     {
         cooldownTimer = cooldown;
+        GameFlowManager.instance.getPlayer().cooldownBarSkill1.SetMaxCooldown(cooldown);
     }
 
     // Update is called once per frame
     void Update()
     {
         cooldownTimer += Time.deltaTime;
+        GameFlowManager.instance.getPlayer().cooldownBarSkill1.SetCooldown(cooldownTimer);
     }
 
     public ForceFieldSkill SetForceField(Attack attack, float cooldown, Character target)

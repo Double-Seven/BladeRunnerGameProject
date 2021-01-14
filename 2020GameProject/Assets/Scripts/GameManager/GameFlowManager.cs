@@ -25,9 +25,6 @@ public class GameFlowManager : MonoBehaviour
     public List<Monster> monsters;
     private bool isGameOver = false;
 
-
-
-    // Start is called before the first frame update
     void Awake()
     {
         if (instance == null)

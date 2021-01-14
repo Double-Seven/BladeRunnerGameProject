@@ -39,9 +39,12 @@ public class Player : Character
 	private float getAttackedCoolDown = 0;  // timer for the protection time after the player is getting attacked
 
 	// Transportation
-	public bool isReachingTPpoint { get; set; } = false;  
+	public bool isReachingTPpoint { get; set; } = false;
 
-
+	// skill cooldown bar
+	public CooldownBar cooldownBarDash;
+	public CooldownBar cooldownBarSkill1;
+	public CooldownBar cooldownBarSkill2;
 
 	// Start is called before the first frame update
 	protected override void Start()
@@ -49,7 +52,7 @@ public class Player : Character
 		// initialization
 		base.healthPoint = playerHP;
         base.Start();  // call the start() in the base class
-
+		HPBar.SetMaxHealth(healthPoint);
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
 

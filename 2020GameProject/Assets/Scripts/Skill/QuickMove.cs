@@ -23,10 +23,16 @@ public class QuickMove : Skill {
         return this;
     }
 
+    private void Start()
+    {
+        GameFlowManager.instance.getPlayer().cooldownBarDash.SetMaxCooldown(cooldown);
+    }
+
     void Update() {
         cooldownTimer += Time.deltaTime;
-//        if (target.fade < 1f && cooldownTimer < duration && !target.isDead)
-//           target.fade += Time.deltaTime * 1f;
+        GameFlowManager.instance.getPlayer().cooldownBarDash.SetCooldown(cooldownTimer);
+        //        if (target.fade < 1f && cooldownTimer < duration && !target.isDead)
+        //           target.fade += Time.deltaTime * 1f;
         if (cooldownTimer >= duration && target.isInvincible) {
             endSkill();
         }
