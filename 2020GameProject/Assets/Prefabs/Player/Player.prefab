@@ -134,12 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e797d6cfeab9b4ef7808b510043c275b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPBar: {fileID: 0}
   capsCollider: {fileID: 0}
   fade: 1
   isInvincible: 0
   playerHP: 10
   protectionTime: 2
-  HPBar: {fileID: 2533468016560241841, guid: 6ff7d9939e9e14729bdec3952becf144, type: 3}
   m_JumpForce: 280
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
@@ -177,6 +177,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isJumping: 1
+  cooldownBarDash: {fileID: 0}
+  cooldownBarSkill1: {fileID: 0}
+  cooldownBarSkill2: {fileID: 0}
 --- !u!114 &101521714087224475
 MonoBehaviour:
   m_ObjectHideFlags: 0

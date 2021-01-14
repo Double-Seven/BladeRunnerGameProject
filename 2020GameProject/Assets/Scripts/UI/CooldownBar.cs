@@ -6,15 +6,14 @@ public class CooldownBar : MonoBehaviour
 {
     public Slider slider;
 
-    // Use this for initialization
-    void Start()
+    public void SetCooldown(float cooldown)
     {
-
+        slider.value = cooldown;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetMaxCooldown(float cooldown)
     {
-
+        slider.maxValue = cooldown;
+        slider.value = cooldown;
     }
 }
