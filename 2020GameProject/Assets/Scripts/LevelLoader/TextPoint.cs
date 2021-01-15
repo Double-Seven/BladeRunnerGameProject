@@ -34,7 +34,7 @@ public class TextPoint : MonoBehaviour
             if (gameObject.name == "FireTextPoint")
                 text.text = "Press Space to fire gun";
             else if (gameObject.name == "JumpTextPoint")
-                text.text = "Press W to jump";
+                text.text = "Press Up to jump";
             else if (gameObject.name == "DashTextPoint")
                 text.text = "Press F to dash, evading attack";
             else if (gameObject.name == "AirSkillText")
