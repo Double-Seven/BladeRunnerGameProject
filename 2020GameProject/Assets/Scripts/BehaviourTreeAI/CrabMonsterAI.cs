@@ -53,7 +53,7 @@ public class CrabMonsterAI : MonoBehaviour
                             })
                             .Do("Jump", () => {
                                 jumpCooldownTimer = 0f;
-                                movementController.quickMove();
+                            //    movementController.quickMove();
                                 return TaskStatus.Success;
                             })
                         .End()
@@ -62,7 +62,7 @@ public class CrabMonsterAI : MonoBehaviour
                                 bool isPlayer = incomingTag.Equals(player.gameObject.tag);
                                 return isPlayer;
                             })
-                            .Do("Quickmove", () => {
+                            .Do("Jump", () => {
                                 jumpCooldownTimer = 0f;
                                 movementController.jump();
                                 return TaskStatus.Success;

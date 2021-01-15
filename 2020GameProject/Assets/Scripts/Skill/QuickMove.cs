@@ -10,7 +10,7 @@ public class QuickMove : Skill {
     GameObject effect;
     CameraShake cameracontroller;
     float cooldownTimer = 0f;
-    float duration = 0.5f;
+    float duration = 0.4f;
 
     public QuickMove SetQuickMove(Attack attack, float cooldown, Character target, GameObject effect, CameraShake cameracontroller) {
         base.SetSkill(attack, cooldown);
@@ -40,6 +40,8 @@ public class QuickMove : Skill {
 
     public override void runSkill(Vector2 move) { 
         if (cooldownTimer < cooldown) return;
+        if (target.gameObject.tag == "Player")
+            Time.timeScale = 0.4f;
         float verticalMove = move.y * 5;
         bool isJumping = false;
         bool isCrouching = false;
@@ -68,7 +70,7 @@ public class QuickMove : Skill {
     }
 
     void ShowEffects(bool isJumping) {
-        target.fade = 0.2f; // fade effect in reverse
+        target.fade = 0.4f; // fade effect in reverse
 		target.isInvincible = true;
         foreach (Collider col in target.GetComponentsInChildren<Collider>())
         {
@@ -89,6 +91,8 @@ public class QuickMove : Skill {
 
 
     void endSkill() {
+        if (target.gameObject.tag == "Player")
+            Time.timeScale = 1f;
         target.isInvincible = false; // end of quickmove invincibility
         foreach (Collider col in target.GetComponentsInChildren<Collider>())
         {

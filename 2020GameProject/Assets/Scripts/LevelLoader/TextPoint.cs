@@ -32,7 +32,9 @@ public class TextPoint : MonoBehaviour
         if (collision.tag == "Player")
         {
             if (gameObject.name == "FireTextPoint")
-                text.text = "Press D to fire gun";
+                text.text = "Press Space to fire gun";
+            else if (gameObject.name == "JumpTextPoint")
+                text.text = "Press Up to jump";
             else if (gameObject.name == "DashTextPoint")
                 text.text = "Press F to dash, evading attack";
             else if (gameObject.name == "AirSkillText")
