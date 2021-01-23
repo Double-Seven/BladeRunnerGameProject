@@ -1,5 +1,6 @@
-# BladeRunnerGameProject
+# BladeRunnerGameProject (In development)
 2020 Winter holiday Game Project: Blade Runner / roguelike / 2D
+A demo video can be seen here: https://www.youtube.com/watch?v=7Jgug5eI9Sk
 
 
 ## Google Doc for contents
