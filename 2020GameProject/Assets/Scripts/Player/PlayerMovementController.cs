@@ -109,7 +109,7 @@ public class PlayerMovementController : MotionController
 	}
 
 	void QuickMove() {
-		this.quickMoveSkill.runSkill(new Vector2(player.isFacingRight ? 1 : -1, Input.GetAxisRaw("Vertical")));
+		this.quickMoveSkill.runSkill(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
 	}
 
 	// used for physical updates

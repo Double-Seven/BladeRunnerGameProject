@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 
 public class Parallax : MonoBehaviour {
-    private float length, startpos;
+    private float length = 8f, startpos;
     public GameObject cam;
     public float parallaxEffect = 1;
 
     private void Start()
     {
         startpos = transform.position.x;
-        length = GetComponent<MeshRenderer>().bounds.size.x;
-        if (Mathf.Approximately(length, 0f)) length = 10f;
-        Debug.Log(gameObject.name + length);
+        MeshRenderer mr = GetComponent<MeshRenderer>();
+        if (mr) length = mr.bounds.size.x;
+        else length = 20f;
+        Debug.Log(length);
     }
 
     private void Update()

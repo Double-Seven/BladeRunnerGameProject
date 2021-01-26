@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Camara\MainSceneCameraController.cs" />
     <Compile Include="Assets\Scripts\Camara\Parallax.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameFlowManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager\GenerateTerrainManager.cs" />
     <Compile Include="Assets\Scripts\GameManager\SpawnEnemyManager.cs" />
     <Compile Include="Assets\Scripts\LevelLoader\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\LevelLoader\TeleportPoint.cs" />

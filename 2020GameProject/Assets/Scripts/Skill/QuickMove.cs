@@ -47,13 +47,13 @@ public class QuickMove : Skill {
         bool isCrouching = false;
  
         float deltaAngle = verticalMove;
-        float JumpForce = 4000f;
+        float JumpForce = 30f;
 
         
         Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad*deltaAngle) * JumpForce, Mathf.Sin(Mathf.Deg2Rad*deltaAngle) * JumpForce);
-
+ 
         // if (!this.target.isFacingRight)
-            direction.x = direction.x * move.x;
+       direction.x = direction.x * move.x;
         
        if (verticalMove > 0) {
             isJumping = true;
@@ -62,9 +62,12 @@ public class QuickMove : Skill {
         }
 
         // allow for dash jump when on ground
-        target.Move(0, isCrouching, isJumping);
+        //target.Move(0, isCrouching, isJumping);
 
-        target.thisRB.AddForce(direction);
+        // target.thisRB.AddForce(direction);
+        
+        // use Move instead
+        target.Move((direction.x), isCrouching, isJumping);
         ShowEffects(isJumping);
 
     }
