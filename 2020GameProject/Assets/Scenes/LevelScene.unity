@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -128,6 +128,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36847711, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1849304067}
+    - target: {fileID: 36847712, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1849304067}
+    - target: {fileID: 36847713, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1849304067}
+    - target: {fileID: 803593309707604109, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1849304067}
     - target: {fileID: 3241871959892686076, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,16 +199,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479867560189672153, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5735477125339835998, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8887412031779461128, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
         type: 3}
@@ -787,6 +794,12 @@ PrefabInstance:
 --- !u!20 &1849304066 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3267308906506240045, guid: d1f323de6bf20474a932b829f76e3aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849304065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1849304067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3267308906506240046, guid: d1f323de6bf20474a932b829f76e3aab,
     type: 3}
   m_PrefabInstance: {fileID: 1849304065}
   m_PrefabAsset: {fileID: 0}

@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\BehaviourTreeAI\PlayerMonsterAI.cs" />
     <Compile Include="Assets\Scripts\Camara\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camara\MainSceneCameraController.cs" />
+    <Compile Include="Assets\Scripts\Camara\Parallax.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameFlowManager.cs" />
     <Compile Include="Assets\Scripts\GameManager\SpawnEnemyManager.cs" />
     <Compile Include="Assets\Scripts\LevelLoader\LevelLoader.cs" />
