@@ -48,6 +48,8 @@ public class Player : Character
 
 	public CameraShake CameraParent;
 
+	float yDelta;
+
 	// Start is called before the first frame update
 	protected override void Start()
     {
@@ -60,21 +62,27 @@ public class Player : Character
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+		yDelta = transform.position.y;
 		
 	}
 
     // Update is called once per frame
     void FixedUpdate()
     {
-		getAttackedCoolDown += Time.deltaTime;  // update the protection timer
+		getAttackedCoolDown += Time.fixedDeltaTime;  // update the protection timer
 
 		// update grounded state
 		this.isGrounded = thisRB.IsTouching(groundContactFilter);
-
+		
+		if ((transform.position.y - yDelta) / Time.fixedDeltaTime > 7f) {
+			thisRB.velocity = new Vector2(thisRB.velocity.x, 0f);
+		}
+		yDelta = transform.position.y;
 		groundCheckTimer += Time.deltaTime; // update timer
 
 		// only call OnLandEvent after 0.1s of the jumping action (reset timer everytime the player jumps)
-		if (groundCheckTimer >= 0.1f && isJumping)
+		if (groundCheckTimer >= 0.05f)
 		{   
 			if (this.isGrounded)
 			{

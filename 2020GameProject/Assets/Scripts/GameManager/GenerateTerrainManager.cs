@@ -35,6 +35,7 @@ class GenerateTerrainManager : MonoBehaviour
         {
             Instantiate(obstacles[Random.Range(0, obstacles.Count)], new Vector2(cameraPos + distance, -1f), transform.rotation);
             lastObstacle = cameraPos + distance;
+   
         }
     }
 }
