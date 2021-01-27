@@ -46,6 +46,8 @@ public class Player : Character
 	public CooldownBar cooldownBarSkill1;
 	public CooldownBar cooldownBarSkill2;
 
+	public CameraShake CameraParent;
+
 	// Start is called before the first frame update
 	protected override void Start()
     {
@@ -140,7 +142,7 @@ public class Player : Character
 			Vector3 targetVelocity = new Vector2(move * 10f, thisRB.velocity.y);
 			// And then smoothing it out and applying it to the character (pass m_Velocity by reference, and SmoothDamp will change it gradually by applying smoothing)
 			thisRB.velocity = Vector3.SmoothDamp(thisRB.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
-
+			
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !isFacingRight)
 			{

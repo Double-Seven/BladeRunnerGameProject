@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 92735874370384030}
   - component: {fileID: 5292422902510672128}
   - component: {fileID: 5512442214661097739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Truck
   m_TagString: Ground
   m_Icon: {fileID: 0}

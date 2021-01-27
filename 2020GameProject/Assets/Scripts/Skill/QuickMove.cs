@@ -89,7 +89,7 @@ public class QuickMove : Skill {
 		}
         if (!effect || !cameracontroller) return;
 		Instantiate(effect, target.transform.position, Quaternion.identity);
-		cameracontroller.ShakeCamera(0.5f, 0.005f);
+		//cameracontroller.ShakeCamera(0.5f, 0.005f);
     }
 
 

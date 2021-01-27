@@ -118,6 +118,14 @@ public class PlayerMovementController : MotionController
 		// Move our character
 		player.Move(horizontalMove * Time.fixedDeltaTime, isCrouching, isJumping);
 		isJumping = false;
+
+		// HACK: prevent jumping over screen
+		if (player.transform.position.y > 5f)
+        {
+			Vector2 currentVel = player.thisRB.velocity;
+			currentVel.y = -10f;
+			player.thisRB.velocity = currentVel;
+        }
 		//isQuickMoving = false;
 	}
 

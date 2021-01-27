@@ -26,7 +26,9 @@ public class ShootingSkill : Skill {
     public override void createSkill(Transform transform) {
         if (cooldownTimer > cooldown)
         {
-            GameFlowManager.instance.getPlayer().GetComponent<MotionController>().animator.Play("Base Layer.Jump", 0, 0f);
+            Player player = GameFlowManager.instance.getPlayer();
+            player.CameraParent.ShakeCamera(0.5f, 0.005f);
+            player.GetComponent<MotionController>().animator.Play("Base Layer.Jump", 0, 0f);
             float deltaAngle = 180 / numBullets_skill1;
             // generate bullets flying from the player (one bullet for each deltaAngle degree around the player)
             for (int i = 0; i < numBullets_skill1; i++)

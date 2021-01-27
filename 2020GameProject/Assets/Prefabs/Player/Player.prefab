@@ -180,6 +180,8 @@ MonoBehaviour:
   cooldownBarDash: {fileID: 0}
   cooldownBarSkill1: {fileID: 0}
   cooldownBarSkill2: {fileID: 0}
+  CameraParent: {fileID: 3267308907573881163, guid: d1f323de6bf20474a932b829f76e3aab,
+    type: 3}
 --- !u!114 &101521714087224475
 MonoBehaviour:
   m_ObjectHideFlags: 0
