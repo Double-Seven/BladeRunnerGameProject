@@ -180,6 +180,8 @@ MonoBehaviour:
   cooldownBarDash: {fileID: 0}
   cooldownBarSkill1: {fileID: 0}
   cooldownBarSkill2: {fileID: 0}
+  CameraParent: {fileID: 3267308907573881163, guid: d1f323de6bf20474a932b829f76e3aab,
+    type: 3}
 --- !u!114 &101521714087224475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,9 +292,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: -0.218}
+  m_Offset: {x: 0.0215532, y: -0.26797432}
   serializedVersion: 2
-  m_Radius: 0.13
+  m_Radius: 0.082839645
 --- !u!1 &101521714247101304
 GameObject:
   m_ObjectHideFlags: 0

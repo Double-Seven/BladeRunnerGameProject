@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainSceneCameraController : MonoBehaviour
 {
 
-    public GameObject player;
+    public Character player;
 
     [Header("Motion values")]
     public float horizontaLevel = 2;  // the fixed y-level of camera
@@ -24,6 +24,7 @@ public class MainSceneCameraController : MonoBehaviour
     void Update()
     {
         // only make this camera follow the change of x-position of player in the main scene
+        if (!player.isFacingRight || player.transform.position.x < transform.position.x) return;
         Vector3 cameraPos = new Vector3(player.transform.position.x, horizontaLevel, depthLevel);
 
         // Smoothly move the camera towards that target position
