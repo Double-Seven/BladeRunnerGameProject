@@ -213,6 +213,11 @@ PrefabInstance:
       propertyPath: cooldownBarSkill2
       value: 
       objectReference: {fileID: 1142447531}
+    - target: {fileID: 6542235627710674089, guid: cc644ba1334ea4b92bbe9bd83625967b,
+        type: 3}
+      propertyPath: CameraParent
+      value: 
+      objectReference: {fileID: 1583010073}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc644ba1334ea4b92bbe9bd83625967b, type: 3}
 --- !u!114 &239828673 stripped
@@ -717,6 +722,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7d77c393cbb5149b21427af3f7faa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1215862844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3267308906506240046, guid: d1f323de6bf20474a932b829f76e3aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3267308906261772370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1444449453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8031597457649467054, guid: 1485cadb4a2324dd4b3816052dfff52c,
@@ -818,6 +829,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -241.7
       objectReference: {fileID: 0}
+    - target: {fileID: 471722513, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1215862844}
+    - target: {fileID: 803593309707604109, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1215862844}
     - target: {fileID: 3241871959892686076, guid: 188ed6bb9f2574d13a4c4c2ea9046cc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1339,7 +1359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 256441982, guid: 1485cadb4a2324dd4b3816052dfff52c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.00003
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 589094316744755370, guid: 1485cadb4a2324dd4b3816052dfff52c,
         type: 3}
@@ -1659,5 +1679,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1116244117}
+    - target: {fileID: 8633909721634531835, guid: 5456935af9b614a3ba24e0a7f24a9bc9,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1215862844}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5456935af9b614a3ba24e0a7f24a9bc9, type: 3}

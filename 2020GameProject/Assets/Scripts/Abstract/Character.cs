@@ -34,7 +34,7 @@ public abstract class Character : MonoBehaviour
     /// Function to decrease the HP of character
     /// </summary>
     /// <param name="damage"></param>
-    protected void getAttacked(int damage)
+    public void getAttacked(int damage)
     {
         if (!isInvincible)
             this.healthPoint -= damage;

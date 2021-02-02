@@ -24,6 +24,7 @@ public class PlayerAttackController : AttackController
     private float skill1CoolDownTimer = 0;  // timer for the skill1 cooldown
 
     int attacksFired = 0;
+    int rayAttack = 1;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -107,7 +108,7 @@ public class PlayerAttackController : AttackController
             attacksFired++;
             if (attacksFired >= 5)
             {
-                this.attackSelected = 1;
+                this.attackSelected = rayAttack;
                 attacksFired = 0;
             } else
             {

@@ -18,11 +18,13 @@ public abstract class RayAttack : Attack
             {
                 // hit target
                 lineRenderer.SetPosition(1, hitInfo.point);
+                character.getAttacked(damage);
+                Debug.Log("ray hit");
             } else
             {
                 lineRenderer.SetPosition(1, transform.position + direction * 1000);
             }
-            Debug.Log("ray hit");
+            
             
             
         } else

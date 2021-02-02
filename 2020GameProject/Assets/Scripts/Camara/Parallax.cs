@@ -16,6 +16,7 @@ public class Parallax : MonoBehaviour {
 
     private void Update()
     {
+        if (!cam) cam = GameFlowManager.instance.getCamera();
         float temp = (cam.transform.position.x * (1 - parallaxEffect));
         float distance = (cam.transform.position.x * parallaxEffect);
 

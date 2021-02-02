@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7882bc40dc2c3a4b8a305295bd5f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 10
   speed: 0
   animator: {fileID: 0}
   lineRenderer: {fileID: 5512999322762238547}
