@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class SpawnEnemyManager : MonoBehaviour
 {
-    public SpawnEnemyManager instance;
+    public static SpawnEnemyManager instance;
     public List<Monster> allMonsters;
     public float spawnRate = 3f;
     public float startTime = 0f;
@@ -22,16 +22,16 @@ public class SpawnEnemyManager : MonoBehaviour
         }
         player = GameFlowManager.instance.getPlayer();
 
-        InvokeRepeating("Spawn", startTime, spawnRate);
+       //  InvokeRepeating("Spawn", startTime, spawnRate);
     }
 
-    void Spawn()
+    public void Spawn(Vector2 positionSpawn)
     {
         List<Monster> monsters = GameFlowManager.instance.monsters;
         Monster monsterToSpawn = nextSpawn(monsters);
-        Vector2 positionSpawn = positionNearPlayer(player.transform.position);
+        // Vector2 positionSpawn = positionNearPlayer(player.transform.position);
 
-        if (monsters.Count < 3)
+       // if (monsters.Count < 3)
         {
             Instantiate(monsterToSpawn, positionSpawn, transform.rotation);
         }
