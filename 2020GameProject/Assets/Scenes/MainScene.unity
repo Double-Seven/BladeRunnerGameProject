@@ -128,19 +128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1696825743, guid: cc644ba1334ea4b92bbe9bd83625967b, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 101521714087224468, guid: cc644ba1334ea4b92bbe9bd83625967b,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 101521714087224468, guid: cc644ba1334ea4b92bbe9bd83625967b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 101521714087224473, guid: cc644ba1334ea4b92bbe9bd83625967b,
         type: 3}
@@ -202,21 +193,6 @@ PrefabInstance:
       propertyPath: CameraParent
       value: 
       objectReference: {fileID: 1583010073}
-    - target: {fileID: 101521714247101304, guid: cc644ba1334ea4b92bbe9bd83625967b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 101521714662120899, guid: cc644ba1334ea4b92bbe9bd83625967b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1007569192867566334, guid: cc644ba1334ea4b92bbe9bd83625967b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6542235627710674089, guid: cc644ba1334ea4b92bbe9bd83625967b,
         type: 3}
       propertyPath: HPBar

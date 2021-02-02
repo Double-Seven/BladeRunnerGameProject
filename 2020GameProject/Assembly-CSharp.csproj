@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\Attack\Bullets\Monster_Bullet1.cs" />
     <Compile Include="Assets\Scripts\Attack\Bullets\Player_Bullet1.cs" />
     <Compile Include="Assets\Scripts\Attack\ForceFields\ForceField.cs" />
+    <Compile Include="Assets\Scripts\Attack\Rays\PlayerRayAttack.cs" />
+    <Compile Include="Assets\Scripts\Attack\Rays\RayAttack.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\CrabMonsterAI.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\FlyingMonsterAI.cs" />
     <Compile Include="Assets\Scripts\BehaviourTreeAI\PlayerMonsterAI.cs" />
