@@ -20,6 +20,7 @@ public class GameFlowManager : MonoBehaviour
 
 
     public Player player;
+    public GameObject mainCamera;
     private Player playerScript;
     private LevelLoader levelLoader;
     public List<Monster> monsters;
@@ -43,6 +44,15 @@ public class GameFlowManager : MonoBehaviour
         // get the level loader instance
         levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
+        if (!player)
+        {
+            player = GameObject.Find("Player").GetComponent<Player>();
+        }
+
+        if (!mainCamera)
+        {
+            mainCamera = GameObject.Find("Main Camera").GetComponent<GameObject>();
+        }
 
         //set win text and lose text and button to invisible at the beginning
         winText.gameObject.SetActive(false);
@@ -78,6 +88,11 @@ public class GameFlowManager : MonoBehaviour
     public Player getPlayer()
     {
         return this.player;
+    }
+
+    public GameObject getCamera()
+    {
+        return mainCamera;
     }
 
     //button action listenner function for PlayAgainButton

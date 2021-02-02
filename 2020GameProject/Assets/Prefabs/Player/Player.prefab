@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1696825744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: muzzlePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 101521714087224478}
   - component: {fileID: 101521714087224479}
   - component: {fileID: 101521714087224476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -216,6 +216,7 @@ MonoBehaviour:
   animator: {fileID: 101521714087224469}
   attacks:
   - {fileID: 4497383734388207754, guid: 4061fe785d7ad47e19c3c619e0ce153b, type: 3}
+  - {fileID: 4494596460283269823, guid: 95ee0b5d668fb694fac13905eb178cfe, type: 3}
   - {fileID: 9158815435108530928, guid: 4ef2fa47581302c489d5b80d78cee657, type: 3}
   attackSelected: 0
   muzzlePoint: {fileID: 1696825744}
@@ -304,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101521714247101305}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101521714662120896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CellingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +367,7 @@ GameObject:
   - component: {fileID: 1589407206604978473}
   - component: {fileID: 1066128303}
   - component: {fileID: 5800382269938902048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MeleePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

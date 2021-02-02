@@ -16,14 +16,15 @@ public class PlayerAttackController : AttackController
     public Character character;
 
     private float fireCoolDownTimer = 0;  // timer for the shooting cooldown
-    private float spawnRange = 0.1f;  // the vertical spawan range for bullets (to add some randomness to the bullets spawning position)
+    private float spawnRange = 0.01f;  // the vertical spawan range for bullets (to add some randomness to the bullets spawning position)
     private Skill shootingSkill;
     private ForceFieldSkill forceFieldSkill;
 
     // skill1
     private float skill1CoolDownTimer = 0;  // timer for the skill1 cooldown
-   
 
+    int attacksFired = 0;
+    int rayAttack = 1;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -51,6 +52,8 @@ public class PlayerAttackController : AttackController
     // Update is called once per frame
     protected override void Update()
     {
+        this.currentAttack = this.attacks[this.attackSelected];
+            
         // update cooldown
         this.updateCooldown();
 
@@ -101,6 +104,16 @@ public class PlayerAttackController : AttackController
         // if cooldown is terminated, player can shoot
         if (fireCoolDownTimer > shootingCoolDown)
         {
+            // shoot a ray laser every 5 fire
+            attacksFired++;
+            if (attacksFired >= 5)
+            {
+                this.attackSelected = rayAttack;
+                attacksFired = 0;
+            } else
+            {
+                this.attackSelected = 0;
+            }
             // add some randomness to the bullets spawning y-position
             Vector3 spawnPos = new Vector3(this.muzzlePoint.position.x, Random.Range(this.muzzlePoint.position.y - spawnRange, this.muzzlePoint.position.y + spawnRange), this.muzzlePoint.transform.position.z);
             Attack bullet = Instantiate(this.currentAttack, spawnPos, Quaternion.Euler(0, 0, 180 * (character.isFacingRight ? 0 : 1)));  // generate a bullet
