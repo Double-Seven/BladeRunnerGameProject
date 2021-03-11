@@ -1,43 +1,27 @@
 ﻿<Properties StartupConfiguration="{5DBD7BEE-C477-F2FA-1AF8-6F4E1051B85E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/HealthBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Player.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/PlayerMovementController.cs" Line="26" Column="1" />
       <File FileName="Assets/Scripts/LevelLoader/LevelLoader.cs" Line="17" Column="6" />
-      <File FileName="Assets/Scripts/LevelLoader/TeleportPoint.cs" Line="7" Column="1" />
-      <File FileName="Assets/Scripts/GameManager/GameFlowManager.cs" Line="28" Column="1" />
-      <File FileName="Assets/Scripts/LevelLoader/NewMonoBehaviour.cs" Line="41" Column="73" />
-      <File FileName="Assets/Scripts/Skill/ForceFieldSkill.cs" Line="51" Column="1" />
-      <File FileName="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/HealthBar.cs" Line="7" Column="26" />
-      <File FileName="Assets/Scripts/Abstract/Character.cs" Line="41" Column="19" />
-      <File FileName="Assets/Scripts/Player/Player.cs" Line="52" Column="8" />
-      <File FileName="Assets/Scripts/Attack/Bullets/Monster_Bullet1.cs" Line="34" Column="51" />
-      <File FileName="Assets/Scripts/Player/PlayerAttackController.cs" Line="89" Column="1" />
-      <File FileName="Assets/Scripts/UI/CooldownBar.cs" Line="7" Column="11" />
+      <File FileName="Assets/Scripts/LevelLoader/TeleportPoint.cs" />
+      <File FileName="Assets/Scripts/GameManager/GameFlowManager.cs" />
+      <File FileName="Assets/Scripts/Skill/ForceFieldSkill.cs" />
+      <File FileName="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
+      <File FileName="Assets/Scripts/UI/HealthBar.cs" />
+      <File FileName="Assets/Scripts/Abstract/Character.cs" />
+      <File FileName="Assets/Scripts/Player/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Attack/Bullets/Monster_Bullet1.cs" />
+      <File FileName="Assets/Scripts/Player/PlayerAttackController.cs" />
+      <File FileName="Assets/Scripts/UI/CooldownBar.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="2020GameProject" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="Abstract" expanded="True" />
-                  <Node name="Attack" expanded="True">
-                    <Node name="Bullets" expanded="True" />
-                  </Node>
-                  <Node name="GameManager" expanded="True" />
-                  <Node name="LevelLoader" expanded="True" />
-                  <Node name="Player" expanded="True" />
-                  <Node name="Skill" expanded="True" />
-                  <Node name="UI" expanded="True">
-                    <Node name="HealthBar.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="TextMesh Pro" expanded="True">
-                  <Node name="Examples &amp; Extras" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Player" expanded="True">
+                  <Node name="Player.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -48,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c1a2352a-4d7d-4692-9275-bc01143a6c5d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb6970ab-32ab-4b01-8fc7-f7e25a793ffc" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
